@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: pponline-debittrans
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        service-id: pponline-config 
+eureka:
+  instance:
+    non-secure-port: ${server.port:8086}
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka,http://peer2:1112/eureka
